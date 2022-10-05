@@ -22,19 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link text-light" id="home" href="#home">Home</a>
+                        <a class="nav-link text-light" id="home" href="/views/home.handlebars">Home</a>
                     </li>
                     <!-- Conditionally render login or logout links -->
                     {{#if logged_in}}
                     <li class="nav-item active">
-                        <a class="nav-link text-light" id="dashboard" href="/dashboard">Dashboard</a>
+                        <a class="nav-link text-light" id="dashboard" href="/views/dashboard.handlebars">Dashboard</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link text-light" id="logout">Logout</a>
                     </li>
                     {{else}}
                     <li class="nav-item active">
-                        <a class="nav-link text-light" id="login" href="/login">Login</a>
+                        <a class="nav-link text-light" id="login" href="/views/login.handlebars">Login</a>
                     </li>
                     {{/if}}
                 </ul>
