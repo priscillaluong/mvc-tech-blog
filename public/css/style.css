@@ -1,6 +1,10 @@
 #page-container {
     position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
 .header-styling {
@@ -136,6 +140,10 @@ footer {
     padding: 15px 25px 5px 25px;
 }
 
+.dashboard-post-header:hover {
+    cursor: pointer;
+}
+
 .post-body, .comment-body {
     padding: 20px 25px 5px 25px;
     border: 3px solid rgba(87,111,230,1);
@@ -148,7 +156,8 @@ footer {
     align-items: center;
 }
 
-.comment-text {
+.comment-text,
+.content-text {
     height: 100px;
 }
 
@@ -157,11 +166,35 @@ footer {
     font-weight: 300;
 }
 
-.comment-text, .comment-btn {
+.comment-text, .comment-btn,
+.update-btn, .delete-btn,
+.content-text, .title-text,
+.create-btn {
     margin-bottom: 20px;
     width: 100%;
 }
 
 .commenter-details {
     text-align: right;
+}
+
+.new-create {
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgba(87,111,230,1);
+    border-radius: 10px;
+    color: white;
+}
+
+.new-create:hover, .update-btn:hover,
+.delete-btn:hover, .comment-btn:hover,
+.create-btn:hover {
+    cursor: pointer;
+}
+
+.create-btn-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
