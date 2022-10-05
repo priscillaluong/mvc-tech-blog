@@ -113,9 +113,25 @@ footer {
     margin: 20px 0;
 }
 
+.dashboard-post-container {
+    width: 85%;
+    margin: 20px 0;
+}
+
 .post-header, .comment-header {
     background-color: rgba(87,111,230,1);
     border-radius: 15px 15px 0 0;
+    color: white;
+    padding: 15px 25px 5px 25px;
+}
+
+.dashboard-post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(87,111,230,1);
+    border-radius: 15px;
     color: white;
     padding: 15px 25px 5px 25px;
 }
@@ -144,4 +160,8 @@ footer {
 .comment-text, .comment-btn {
     margin-bottom: 20px;
     width: 100%;
+}
+
+.commenter-details {
+    text-align: right;
 }
