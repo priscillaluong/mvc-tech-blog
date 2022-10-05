@@ -24,11 +24,11 @@
                     <li class="nav-item active">
                         <a class="nav-link text-light" id="home" href="/views/home.handlebars">Home</a>
                     </li>
-                    <!-- Conditionally render login or logout links -->
-                    {{#if logged_in}}
                     <li class="nav-item active">
                         <a class="nav-link text-light" id="dashboard" href="/views/dashboard.handlebars">Dashboard</a>
                     </li>
+                    <!-- Conditionally render login or logout links -->
+                    {{#if logged_in}}
                     <li class="nav-item active">
                         <a class="nav-link text-light" id="logout">Logout</a>
                     </li>
