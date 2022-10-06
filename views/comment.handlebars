@@ -16,12 +16,10 @@
 <div class="parent-comment">
     <div class="comment-container">
         <div class="comment-header">
-            <p class="commenter-details"> - by xyz on 5/8/22</p>
+            <p class="commenter-details"> - by {{post.comment.user.name}} on {{post.comment.date_created}}</p>
         </div>
         <div class="comment-body">
-            <p class="body-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.</p>
+            <p class="body-text">{{post.comment.content}}</p>
         </div>
     </div>
 </div>
