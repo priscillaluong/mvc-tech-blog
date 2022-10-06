@@ -1,12 +1,14 @@
 <!--DASHBOARD POSTS-->
+{{#each posts as |post|}}
 <div class="parent-post">
     <div class="dashboard-post-container">
         <div class="dashboard-post-header">
-            <h3 class="post-title">Why MVC is so important</h3>
-            <p class="title-details">Posted by xyz on 5/8/22</p>
+            <h3 class="post-title">{{post.title}}</h3>
+            <p class="title-details">Posted on {{format_date post.date_created}}</p>
         </div>
     </div>
 </div>
+{{/each}}
 <!--DASHBOARD POSTS END-->
 <!-- CREATE NEW POST BUTTON START -->
 <div class="create-btn-parent">
