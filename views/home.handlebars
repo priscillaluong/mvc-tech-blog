@@ -1,15 +1,15 @@
 <!-- HOME PAGE POSTS START -->
+{{#each posts as |post| }}
 <div class="parent-post">
     <div class="post-container">
         <div class="post-header">
-            <h3 class="post-title">Why MVC is so important</h3>
-            <p class="title-details">Posted by xyz on 5/8/22</p>
+            <h3 class="post-title">{{post.title}}</h3>
+            <p class="title-details">Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </div>
         <div class="post-body">
-            <p class="body-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.</p>
+            <p class="body-text">{{post.content}}</p>
         </div>
     </div>
 </div>
+{{/each}}
 <!-- HOME PAGE POSTS END -->
