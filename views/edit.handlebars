@@ -1,17 +1,17 @@
 <!-- EDIT/UPDATE POST FORM START -->
 <div class="parent-post">
-    <div class="post-container">
+    <form class="post-container edit-user-post">
         <div class="post-header">
             <h2 class="comment-title">Edit Post</h2>
         </div>
         <div class="post-body">
             <p>Title:</p>
-            <textarea type="text" class="title-text">{{post.title}}</textarea>
+            <textarea type="text" class="title-text new-post-title">{{post.title}}</textarea>
             <p>Content:</p>
-            <textarea type="text" class="content-text">{{post.content}}</textarea>
-            <input type="submit" value="Update" class="update-btn">
-            <input type="submit" value="Delete" class="delete-btn">
+            <textarea type="text" class="content-text new-post-content">{{post.content}}</textarea>
+            <button type="button" data-id="{{post.id}}" class="btn btn-primary btn-align" id="update-btn">Update</button>
+            <button type="button" data-id="{{post.id}}" class="btn btn-primary btn-align" id="delete-btn">Delete</button>
         </div>
-    </div>
+    </form>
 </div>
 <!-- EDIT/UPDATE POST FORM END -->

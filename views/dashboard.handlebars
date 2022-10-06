@@ -1,7 +1,7 @@
 <!--DASHBOARD POSTS-->
 {{#each posts as |post|}}
 <div class="parent-post">
-    <div class="dashboard-post-container edit-user-post" data-id="{{post.id}}">
+    <div class="dashboard-post-container edit-user-post">
         <a href="/api/users/edit/{{post.id}}">
         <div class="dashboard-post-header">
             <h3 class="post-title">{{post.title}}</h3>

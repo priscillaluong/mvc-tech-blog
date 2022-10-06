@@ -21,9 +21,11 @@ const newPostHandler = async (event) => {
         }
     }
   };
+  
+/*
 
-  const editPostHandler = async (event) => {
-    console.log("Edit post handler received!");
+  const updatePostHandler = async (event) => {
+    event.preventDefault();
     console.log(event);
   
     const title = document.querySelector('#new-post-title').value.trim();
@@ -45,29 +47,12 @@ const newPostHandler = async (event) => {
             alert('Failed to create post');
         }
     }
-  };
-  
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/projects/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete project');
-      }
-    }
-  };
+  }; */
   
   document
     .querySelector('.create-new-post')
     .addEventListener('submit', newPostHandler);
-  
+
     document
-    .querySelector('.edit-user-post')
-    .addEventListener('click', editPostHandler);
-  
+    .querySelector('.update-btn')
+    .addEventListener('submit', updatePostHandler);
