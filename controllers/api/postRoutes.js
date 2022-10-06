@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -17,7 +17,14 @@ router.post('/', withAuth, async (req, res) => {
 
 router.get('/:id', withAuth, async (req, res) => {
     try {
-      const postData = await Post.findByPk(req.params.id);
+      const postData = await Post.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
       
       if (!postData) {
         res.status(404).json({ message: 'No post found with this id!' });
