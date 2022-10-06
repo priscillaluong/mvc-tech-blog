@@ -15,6 +15,25 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+    try {
+      const postData = await Post.findByPk(req.params.id);
+      
+      if (!postData) {
+        res.status(404).json({ message: 'No post found with this id!' });
+        return;
+      }
+      const post = postData.get({ plain: true });
+      console.log(post);
+      res.render('comment', {
+        post,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({
