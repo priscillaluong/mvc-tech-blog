@@ -1,11 +1,13 @@
 <!--DASHBOARD POSTS-->
 {{#each posts as |post|}}
 <div class="parent-post">
-    <div class="dashboard-post-container">
+    <div class="dashboard-post-container edit-user-post" data-id="{{post.id}}">
+        <a href="/api/users/edit/{{post.id}}">
         <div class="dashboard-post-header">
             <h3 class="post-title">{{post.title}}</h3>
             <p class="title-details">Posted on {{format_date post.date_created}}</p>
         </div>
+        </a>
     </div>
 </div>
 {{/each}}
