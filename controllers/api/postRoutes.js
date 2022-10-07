@@ -42,9 +42,13 @@ router.get('/:id', withAuth, async (req, res) => {
         return;
       }
       const post = postData.get({ plain: true });
+      for (let i = 0; i < post.comments.length; i++) {
+          post.comments[i].loggedInUser = req.session.user_id;
+      }
+      console.log(post);
       res.render('comment', {
         post,
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
       });
     } catch (err) {
       res.status(500).json(err);
