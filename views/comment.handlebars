@@ -12,16 +12,20 @@
 </div>
 <!-- INDIVIDUAL POSTS END -->
 <!-- COMMENTS START -->
+{{#if post.comments.length}}
+{{#each post.comments as |comment|}}
 <div class="parent-comment">
     <div class="comment-container">
         <div class="comment-header">
-            <p class="commenter-details"> - by {{post.comments.user.name}} on {{post.comments.date_created}}</p>
+            <p class="commenter-details"> - by {{comment.user.name}} on {{format_date comment.date_created}}</p>
         </div>
         <div class="comment-body">
-            <p class="body-text">{{post.comments.content}}</p>
+            <p class="body-text">{{comment.content}}</p>
         </div>
     </div>
 </div>
+{{/each}}
+{{/if}}
 <!-- COMMENTS END -->
 <!-- ADD COMMENT START -->
 <div class="parent-comment">

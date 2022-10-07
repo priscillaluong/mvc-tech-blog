@@ -17,18 +17,13 @@ async function newCommentHandler(event) {
             console.log(response);
         if (response.ok) {
             console.log("All ok!")
-            /* document.location.reload(); */
+            document.location.reload();
         } else {
             alert('Failed to add comment');
         }
     }
   };
 };
-
-/* function newCommentHandler(e){
-    e.preventDefault();
-    console.log("New comment button clicked");
-} */
 
   document
     .querySelector('.new-comment-btn')
