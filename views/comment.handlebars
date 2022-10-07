@@ -22,7 +22,7 @@
         <div class="comment-body">
             <p class="body-text">{{comment.content}}</p>
             {{#if (ifEquals loggedInUser comment.user_id)}}
-            <input type="submit" value="Update" data-id="{{comment.id}}" class="comment-btn update-comment-btn">
+            <input type="submit" onclick="location.href='/api/posts/comment/{{comment.id}}';" value="Edit" data-id="{{comment.id}}" class="comment-btn">
             <input type="submit" value="Delete" data-id="{{comment.id}}" class="comment-btn delete-comment-btn">
             {{/if}}
         </div>
