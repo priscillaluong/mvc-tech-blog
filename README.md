@@ -1,6 +1,8 @@
 # mvc-tech-blog
 
-A CMS-style blog site, where developers can publish their blog posts and comment on other posts. App follows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+A CMS-style blog site, where developers can publish their blog posts and comment on other posts. App follows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. 
+
+Application is deployed on Heroku, [see below](#link-to-deployed-application) for the link.
 
 ## User Story
 
@@ -47,3 +49,57 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
+
+## Required Packages:
+
+* [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages are used to connect Express.js API (for Controllers) to a MySQL database (for Models). 
+* [express-handlebars](https://www.npmjs.com/package/express-handlebars) to use Handlebars.js for the Views. 
+* [dotenv](https://www.npmjs.com/package/dotenv) package enables environment variables to store sensitive data. 
+* [bcrypt](https://www.npmjs.com/package/bcrypt) to hash passwords. 
+* [express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication. 
+
+# Screenshot of Deployed Application:
+
+![Deployed Application - Sign up page](./assets/images/signup.png)
+
+![Deployed Application - Home page](./assets/images/home.png)
+
+# Application Interaction:
+
+Users are required to sign up and log in to get access to the dashboard, create new posts, comment on/update/delete existing posts. 
+
+* Log in page:
+
+![Deployed Application - Log in page](./assets/images/login.png)
+
+* Once logged in, user is redirected to dashboard where they can view previously created posts, or create a new post:
+
+![Deployed Application - Dashboard](./assets/images/create-btn.png)
+
+* Create a new post:
+
+![Deployed Application - Create New Post](./assets/images/create-new-post.png)
+
+![Deployed Application - Created Post](./assets/images/post-created.png)
+
+* Adding comments to existing posts:
+
+![Deployed Application - Add New Comment](./assets/images/add-comment.png)
+
+![Deployed Application - Comment Added](./assets/images/comment-added.png)
+
+* Editing comments (n.b. users can only edit their own comments and posts):
+
+![Deployed Application - Add New Comment](./assets/images/view-other-comments.png)
+
+![Deployed Application - Comment Added](./assets/images/edit-comment.png)
+
+![Deployed Application - Comment Added](./assets/images/edited-comment.png)
+
+# Link to Deployed Application:
+
+[Click here](https://salty-savannah-57008.herokuapp.com/)
+
+### Final note:
+
+_Any feedback to improve code or implement best practice would be appreciated_ 😊
