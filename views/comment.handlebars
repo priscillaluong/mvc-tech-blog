@@ -12,18 +12,16 @@
 </div>
 <!-- INDIVIDUAL POSTS END -->
 <!-- COMMENTS START -->
-{{#if comments.length}}
 <div class="parent-comment">
     <div class="comment-container">
         <div class="comment-header">
-            <p class="commenter-details"> - by {{post.comment.user.name}} on {{post.comment.date_created}}</p>
+            <p class="commenter-details"> - by {{post.comments.user.name}} on {{post.comments.date_created}}</p>
         </div>
         <div class="comment-body">
-            <p class="body-text">{{post.comment.content}}</p>
+            <p class="body-text">{{post.comments.content}}</p>
         </div>
     </div>
 </div>
-{{/if}}
 <!-- COMMENTS END -->
 <!-- ADD COMMENT START -->
 <div class="parent-comment">
@@ -32,9 +30,8 @@
             <h2 class="comment-title">Add your comment</h2>
         </div>
         <div class="comment-body">
-            <textarea type="text" placeholder=" Enter comment" class="comment-text"></textarea>
-            <input type="submit" value="Submit" class="comment-btn">
+            <textarea type="text" placeholder=" Enter comment" class="comment-text" id="new-comment-content"></textarea>
+            <input type="submit" value="Submit" class="comment-btn new-comment-btn" data-id="{{post.id}}">
         </div>
-
     </div>
 </div>
