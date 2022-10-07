@@ -1,5 +1,5 @@
 document
-.querySelector('#update-comment-btn')
+.querySelector('.update-comment-btn')
 .addEventListener('click', updateCommentHandler);
 
 async function updateCommentHandler(event) {

@@ -24,6 +24,7 @@ async function newCommentHandler(event) {
 };
 
 async function delCommentHandler(event) {
+    console.log("delete button clicked");
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
@@ -38,10 +39,11 @@ async function delCommentHandler(event) {
     }
 }
 
-  document
-    .querySelector('.new-comment-btn')
-    .addEventListener('click', newCommentHandler);
+document
+  .querySelector('.new-comment-btn')
+  .addEventListener('click', newCommentHandler);
 
-    document
-    .querySelector('.delete-comment-btn')
-    .addEventListener('click', delCommentHandler);
+const delButtons = document.querySelectorAll('.delete-comment-btn');
+delButtons.forEach(btn => {
+    btn.addEventListener('click', delCommentHandler);
+});
