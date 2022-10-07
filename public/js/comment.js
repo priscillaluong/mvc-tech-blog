@@ -58,7 +58,7 @@ async function updateCommentHandler(event) {
       });
     
         if (response.ok) {
-            console.log("del comment button all ok");
+            console.log("update comment button all ok");
             /* document.location.reload(); */
         } else {
             alert('Failed to update comment');
