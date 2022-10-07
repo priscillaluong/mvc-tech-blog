@@ -1,7 +1,3 @@
-document
-.querySelector('.update-comment-btn')
-.addEventListener('click', updateCommentHandler);
-
 async function updateCommentHandler(event) {
     event.preventDefault();
     console.log("update button clicked");
@@ -28,3 +24,8 @@ async function updateCommentHandler(event) {
         }
     }
 }
+
+document
+.querySelector('.update-comment-btn')
+.addEventListener('click', updateCommentHandler);
+

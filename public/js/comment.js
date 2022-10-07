@@ -40,8 +40,8 @@ async function delCommentHandler(event) {
 }
 
 document
-  .querySelector('.new-comment-btn')
-  .addEventListener('click', newCommentHandler);
+.querySelector('.new-comment-btn')
+.addEventListener('click', newCommentHandler);
 
 const delButtons = document.querySelectorAll('.delete-comment-btn');
 delButtons.forEach(btn => {
