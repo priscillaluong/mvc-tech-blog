@@ -20,7 +20,9 @@
             <p class="commenter-details"> - by {{comment.user.name}} on {{format_date comment.date_created}}</p>
         </div>
         <div class="comment-body">
-            <p class="body-text">{{comment.content}}</p>
+            <div>
+                <p class="body-text">{{comment.content}}</p>
+            </div>
             {{#if (ifEquals loggedInUser comment.user_id)}}
             <input type="submit" onclick="location.href='/api/posts/comment/{{comment.id}}';" value="Edit" data-id="{{comment.id}}" class="comment-btn">
             <input type="submit" value="Delete" data-id="{{comment.id}}" class="comment-btn delete-comment-btn">

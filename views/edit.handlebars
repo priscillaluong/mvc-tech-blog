@@ -9,8 +9,8 @@
             <textarea type="text" class="title-text new-post-title">{{post.title}}</textarea>
             <p>Content:</p>
             <textarea type="text" class="content-text new-post-content">{{post.content}}</textarea>
-            <button type="button" data-id="{{post.id}}" class="btn btn-primary btn-align" id="update-btn">Update</button>
-            <button type="button" data-id="{{post.id}}" class="btn btn-primary btn-align" id="delete-btn">Delete</button>
+            <input type="submit" value="Update" data-id="{{post.id}}" class="btn-align" id="update-btn">
+            <input type="submit" value="Delete" data-id="{{post.id}}" class="btn-align" id="delete-btn">
         </div>
     </form>
 </div>

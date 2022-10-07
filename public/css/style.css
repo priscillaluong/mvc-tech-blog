@@ -43,7 +43,7 @@
 .parent-flex {
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+    margin: 50px 0;
 }
 
 .form-container {
@@ -70,8 +70,8 @@ form {
 }
 
 .btn-align {
-    margin-top: 10px;
-    width: 150px;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .signup {
@@ -96,6 +96,14 @@ form {
     flex-direction: column;
     width: 85%;
     margin: 20px 0;
+}
+
+.create-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 20px 0;
+    align-items: center;
 }
 
 .dashboard-post-container {
@@ -134,7 +142,6 @@ form {
 .comment-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .comment-text,
@@ -153,6 +160,10 @@ form {
 .create-btn {
     margin-bottom: 20px;
     width: 100%;
+}
+
+.body-text {
+    text-align: left;
 }
 
 .commenter-details {
@@ -190,7 +201,7 @@ form {
 }
 
 footer {
-    margin-top: 60px;
+    margin-top: 50px;
     color: white;
     width: 100%;
     padding: 30px 0;
