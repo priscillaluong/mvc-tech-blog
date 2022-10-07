@@ -1,7 +1,6 @@
 document.querySelector('#delete-btn').addEventListener('click', delPostHandler);
 document.querySelector('#update-btn').addEventListener('click', updatePostHandler);
 
-
 async function delPostHandler(event) {
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
