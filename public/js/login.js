@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
         // If successful, redirect the browser to the dashboard page
         document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert("Wrong email address or password!");
       }
     }
   };
