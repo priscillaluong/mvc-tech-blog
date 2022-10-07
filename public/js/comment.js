@@ -26,14 +26,12 @@ async function newCommentHandler(event) {
 };
 
 async function delCommentHandler(event) {
-    console.log("Delete button clicked");
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
         const response = await fetch(`/api/posts/comment/${id}`, {
             method: 'DELETE',
         });
-    
         if (response.ok) {
             document.location.reload();
         } else {
@@ -60,7 +58,8 @@ async function updateCommentHandler(event) {
       });
     
         if (response.ok) {
-            document.location.reload();
+            console.log("del comment button all ok");
+            /* document.location.reload(); */
         } else {
             alert('Failed to update comment');
         }
@@ -72,9 +71,9 @@ async function updateCommentHandler(event) {
     .addEventListener('click', newCommentHandler);
 
     document
-    .querySelector('#update-comment-btn')
+    .querySelector('.update-comment-btn')
     .addEventListener('click', updateCommentHandler);
 
     document
-    .querySelector('#delete-comment-btn')
+    .querySelector('.delete-comment-btn')
     .addEventListener('click', delCommentHandler);

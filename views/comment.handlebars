@@ -21,9 +21,11 @@
         </div>
         <div class="comment-body">
             <p class="body-text">{{comment.content}}</p>
+            {{#if (ifEquals 1 1)}}
+            <input type="submit" value="Update" data-id="{{comment.id}}" class="comment-btn update-comment-btn">
+            <input type="submit" value="Delete" data-id="{{comment.id}}" class="comment-btn delete-comment-btn">
+            {{/if}}
         </div>
-        <button type="button" data-id="{{comment.id}}" class="btn btn-primary btn-align" id="update-comment-btn">Update</button>
-        <button type="button" data-id="{{comment.id}}" class="btn btn-primary btn-align" id="delete-comment-btn">Delete</button>
     </div>
 </div>
 {{/each}}
