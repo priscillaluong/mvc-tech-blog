@@ -18,15 +18,18 @@ router.post('/', withAuth, async (req, res) => {
 router.get('/:id', withAuth, async (req, res) => {
     try {
       const postData = await Post.findByPk(req.params.id, {
+          //Include User and Comment model to get associated comments and usernames for this post. 
         include: [
           {
             model: User,
             attributes: ['name'],
           },
           {
+            // Returns a comments object within the associated post object
             model: Comment, 
             include: [
                 {
+                    // Returns a user object within the associated comment object
                     model: User,
                     attributes: {
                         user_id: Comment.user_id,
@@ -42,6 +45,7 @@ router.get('/:id', withAuth, async (req, res) => {
         return;
       }
       const post = postData.get({ plain: true });
+      //Add a loggedInUser key: value pair to the comments object so we can compare this with the comments user id in the front end, if matches then allow user to update and delete the comment
       for (let i = 0; i < post.comments.length; i++) {
           post.comments[i].loggedInUser = req.session.user_id;
       }
@@ -95,8 +99,9 @@ router.put('/:id', withAuth, async (req, res) => {
     }
   });
 
-
-/* COMMENTS ROUTES */
+/***********************************************************************/
+/******************** COMMENTS ROUTES **********************************/
+/***********************************************************************/
 
 router.post('/:id', withAuth, async (req, res) => {
     try {
